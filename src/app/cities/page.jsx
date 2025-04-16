@@ -1,14 +1,14 @@
 import React from 'react'
 
-const ProductsPage = () => {
+const CitiesPage = () => {
   return (
     <div>
-        <li>Product 1</li>
-        <li>Product 2</li>
-        <li>Product 3</li>
-        <li>Product 4</li>
+        <li>Cities 1</li>
+        <li>Cities 2</li>
+        <li>Cities 3</li>
+        <li>Cities 4</li>
     </div>
   )
 }
 
-export default ProductsPage
+export default CitiesPage
