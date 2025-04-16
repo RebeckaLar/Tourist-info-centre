@@ -11,7 +11,7 @@ function Error({ error, reset }) {
     console.error(error)
   }, [error])
 
-  const reload = () => {
+  const reload = () => { 
     startTransition(() => {
       router.refresh()
       reset()
@@ -21,7 +21,7 @@ function Error({ error, reset }) {
   return (
     <div>
       <h1 className='text-6xl h-screen flex flex-col items-center justify-center'>
-        Something went wrong when getting the city
+        Something went wrong
       </h1>
       <button onClick={() => reload()} className='py-2 px-10 bg-amber-600 rounded ml-20 mb-20'>Try again</button>
     </div>
