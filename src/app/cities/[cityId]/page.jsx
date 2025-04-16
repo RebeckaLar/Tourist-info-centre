@@ -8,8 +8,15 @@ export const generateMetadata = async({ params }) => {
     }
 }
 
-async function CityDetailsPage({ params }) {
+const generateRandomError = (message) => {
+  const random = Math.floor(Math.random() * 2)
+  if(random === 0) {
+    throw new Error(message)
+  }
+}
 
+async function CityDetailsPage({ params }) {
+  generateRandomError('Could not fetch the product')
   const { cityId } = await params
 
 //   const res = fetch('/api/cities/' + cityId)
