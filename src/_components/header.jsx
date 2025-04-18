@@ -3,10 +3,13 @@ import Link from 'next/link'
 
 export const Header = () => {
   return (
-    <div className='text-center py-10 bg-amber-700 text-3xl flex justify-center gap-4'>
+    <nav className='mx-60 py-10 border-b-2 text-lg flex space-x-5 font-medium items-center'>
+      <div className='text-3xl p-3 font-bold text-center text-amber-400'>
+        <h1 className=''>SweTour</h1>
+      </div>
       <Link href='/'>Home</Link>
-      <Link href='/about'>About</Link>
       <Link href='/cities'>Cities</Link>
-    </div>
+      <Link href='/about'>About Us</Link>
+    </nav>
   )
 }
