@@ -25,24 +25,11 @@ async function CityDetailsPage({ params }) {
       const newArray = Array.from(cities.cities)
 
   const city = newArray.find((city) => city.id == cityId);
-  
-  console.log(cityId) //logs the correct cityId
-  console.log(cities) 
-  console.log(newArray) 
-  console.log(city.title)
 
-  if (!city) {
-    return (
-      <div className='text-6xl flex flex-col items-center justify-center'>
-        <p>City not found</p>
-      </div>
-    )
-  }
+  console.log('ID: ' + city.id + ', City: ' + city.title)
 
   return (
-    <div className='text-6xl flex flex-col items-center justify-center'>
-      {/* <p>City id: {cityId}</p> */}
-      {/* <p>City title: {city.title}</p> */}
+    <div className='text-6xl flex flex-col'>
       <p>{city.title}</p>
     </div>
   )
