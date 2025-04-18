@@ -1,18 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
+import { promises as fs } from 'fs';
+ 
+async function CitiesPage() {
+    const file = await fs.readFile(process.cwd() + '/public/cities.json', 'utf8');
+    const cities = JSON.parse(file);    
+    const newArray = Array.from(cities.cities)
 
-const CitiesPage = () => {
+    console.log(newArray)
+  
   return (
-    <div className='text-6xl flex items-center justify-center'>
-      <ul>
-        <li><Link href='/cities/1'>City 1</Link></li>
-        <li><Link href='/cities/2'>City 2</Link></li>
-        <li><Link href='/cities/3'>City 3</Link></li>
-        <li><Link href='/cities/4'>City 4</Link></li>
-        <li><Link href='/cities/5'>City 5</Link></li>
+        <ul className='mx-10 p-2 justify-center'>
+        {newArray.map((city) => (
+          <li key={city.id}>
+              <Link href={`cities/${city.id}`}>{city.title}</Link>
+              </li>
+        ))}
       </ul>
-    </div>
   )
 }
-
 export default CitiesPage
