@@ -1,0 +1,19 @@
+ { "cities": 
+    [
+    {
+        "id": 1,
+        "title" : "Stockholm",
+        "content": "Stockholm is the capital and most populous city of Sweden, as well as the largest urban area in the Nordic countries."
+    },
+    {
+        "id": 2,
+        "title" : "Gothenburg",
+        "content": "Gothenburg is the second-largest city in Sweden, after the capital Stockholm, and the fifth-largest in the Nordic countries."
+    },
+    {
+        "id": 3,
+        "title" : "Malmö",
+        "content": "Malmö is the largest city in the Swedish county (län) of Skåne (Scania). It is the third-largest city in Sweden, after Stockholm and Gothenburg, and the sixth-largest city in the Nordic region"
+    }
+    ]
+ }
